@@ -1,9 +1,12 @@
 {
   "name": "travlr",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "description": "Travlr Getaways",
+  "author": "Christian",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
