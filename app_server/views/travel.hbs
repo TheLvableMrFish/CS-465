@@ -20,8 +20,8 @@
 								{{#each trips}}
 
 								<li>
-									<a href="travel"><img src="images/{{this.image}}" alt="Img of {{this.name}}"></a>
-									<h2><a href="travel">Gale Reef</a></h2>
+									<a href="/api/trips/{{this.code}}"><img class="img-fluid" src="images/{{this.image}}" alt="Img of {{this.name}}"></a>
+									<h2><a href="travel">{{this.name}}</a></h2>
 									{{{this.description}}}
 								</li>
 

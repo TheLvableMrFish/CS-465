@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app_api",
+    "\\app_api\\controllers",
+    "\\app_api\\database",
+    "\\app_api\\routes",
+    "\\app_server",
+    "\\app_server\\controllers",
+    "\\data"
   ],
+  "SelectedNode": "\\app_server\\controllers\\main.js",
   "PreviewInSolutionExplorer": false
 }
