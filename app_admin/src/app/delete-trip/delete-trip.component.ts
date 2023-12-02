@@ -8,8 +8,7 @@ import { TripDataService } from '../services/trip-data.service';
   styleUrls: ['./delete-trip.component.css']
 })
 export class DeleteTripComponent implements OnInit{
-
-  
+    
 
   constructor(
     private router: Router,
@@ -34,7 +33,7 @@ export class DeleteTripComponent implements OnInit{
       });
   }
 
-  onDelete(){
+  OnDelete(){
       this.tripService.updateTrip(this.tripCode)
         .then(data =>{
           console.log(data);
