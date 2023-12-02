@@ -107,7 +107,7 @@ const tripsUpdateTrip = async (req, res) =>{
 const tripsDeleteTrip = async (req, res) =>{
     console.log(req.body);
     model
-        .findOneAndDelete({ 'code': req.params.tripCode}
+        .findOneAndDelete({ 'code': req.params.tripCode})
         .then(trip =>{
             if(!trip){
                 return res

@@ -49,10 +49,10 @@ export class TripDataService{
   }
 
   public deleteTrip(tripCode: String): Promise<Trip>{
-    console.log('Inside TripDataService#updateTrip');
+    console.log('Inside TripDataService#deleteTrip');
     console.log(tripCode);
     return this.http
-      .delete(this.tripUrl + tripCode, tripCode)
+      .delete(this.tripUrl + tripCode)
       .toPromise()
       .then(response => response.json() as Trip)
       .catch(this.handleError);

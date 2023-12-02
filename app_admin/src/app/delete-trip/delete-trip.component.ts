@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Trip } from '../models/trip';
 import { TripDataService } from '../services/trip-data.service';
+
 
 @Component({
   selector: 'app-delete-trip',
@@ -8,7 +10,7 @@ import { TripDataService } from '../services/trip-data.service';
   styleUrls: ['./delete-trip.component.css']
 })
 export class DeleteTripComponent implements OnInit{
-    
+
 
   constructor(
     private router: Router,
@@ -19,29 +21,28 @@ export class DeleteTripComponent implements OnInit{
     let tripCode = localStorage.getItem("tripCode");
 
    
-    if(!this.tripCode){
+    if(!tripCode){
       alert("Something wrong, couldn't find where I stashed tripCode!")
       this.router.navigate(['']);
     }
 
-    this.tripService.getTrip(tripCode)
+    
+    this.tripService.deleteTrip(tripCode)
       .then(data => {
         console.log(data);
-      })
-      .catch(err =>{
-        console.log('Error in delete', err);
+        this.router.navigate(['']);
       });
   }
 
-  OnDelete(){
-      this.tripService.updateTrip(this.tripCode)
-        .then(data =>{
-          console.log(data);
-          this.router.navigate([''])
-        })
-        .catch(err =>{
-          console.log('Error in delete', err);
-        })
-  }
+  // OnDelete(){
+  //   this.tripService.deleteTrip(this.tripCode)
+  //     .then(data =>{
+  //       console.log(data);
+  //       this.router.navigate([''])
+  //     })
+  //     .catch(err =>{
+  //       console.log('Error in delete', err);
+  //     })
+  // }
 
 }
