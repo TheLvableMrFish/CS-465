@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Trip } from '../models/trip';
 import { TripDataService } from '../services/trip-data.service';
 
 
@@ -34,15 +33,6 @@ export class DeleteTripComponent implements OnInit{
       });
   }
 
-  // OnDelete(){
-  //   this.tripService.deleteTrip(this.tripCode)
-  //     .then(data =>{
-  //       console.log(data);
-  //       this.router.navigate([''])
-  //     })
-  //     .catch(err =>{
-  //       console.log('Error in delete', err);
-  //     })
-  // }
+
 
 }
